@@ -1,0 +1,44 @@
+Logs 
+
+adb shell logcat -c -v threadtime > logs1.txt
+
+adb shell logcat -v threadtime > logs1.txt
+
+
+Pull
+adb pull sdcard/DCIM/Camera/IMG20210816205752.jpg
+
+Push
+adb push logs1.txt /sdcard/Documents/
+
+Kernal Logs 
+
+adb shell cat /proc/kmsg
+
+adb shell cat /dev/kmsg
+
+Swap Mobile
+adb -s number shell
+
+Packages
+adb shell "pm list packages"
+
+Find packages of a specific app
+adb shell "pm list packages -f file"
+
+Install a Specific app
+adb install com.saadderaiya.MS_Paint_2018-08-16.apk 
+
+Uninstall a specific app
+adb uninstall com.saadderaiya.MS_Paint
+
+Version on ADB
+adb version
+
+Process in Mobile
+adb shell
+ps -Af
+
+Command to delete built in apps/bloatware
+adb shell
+pm uninstall -k --user 0 com.finshell.fin
